@@ -1,0 +1,22 @@
+@import "variables";
+
+.background-image,
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background-image {
+  max-height: $app-body-height;
+  max-width: 90vmin;
+}
+
+.background-text {
+  font-size: 5vmax;
+  text-align: center;
+  text-shadow: 5px 5px 0 white;
+
+  max-width: 800px;
+}

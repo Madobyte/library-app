@@ -1,0 +1,31 @@
+#sort-bar {
+  display: flex;
+  align-items: center;
+
+  background-color: #2A9D8F;
+  height: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  & > * {
+    margin: 0.5rem;
+  }
+
+  label {
+    margin-left: auto;
+  }
+
+  select {
+    height: 30px;
+  }
+
+  i {
+    transition: all 0.5s;
+  }
+
+  i:hover {
+    color:white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+footer {
+  background-color: #2A9D8F;
+  height: 50px;
+
+  .credits {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

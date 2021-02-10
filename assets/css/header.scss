@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  align-items: center;
+  
+  height: 75px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  #logo{
+    max-height: 50px;
+  }
+
+  #app-title {
+    color: white;
+    font-weight: 400;
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import 'header';
+@import 'sortBar';
+@import 'appBody';
+@import 'emptyAppBody';
+@import 'footer';
+@import 'addBookBtn';
+@import 'variables';
+@import 'addNewBookModal';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #264653;
+}
