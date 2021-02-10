@@ -1,4 +1,4 @@
-import {logoSrc, appTitle} from './_variables.js'
+import {logoSrc, appTitle} from './variables.js'
 
 export default function constructHeader() {
   const header = document.getElementById('header')
