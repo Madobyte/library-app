@@ -1,5 +1,5 @@
 import {myLibrary} from './myLibrary.js';
-import {backgroundImageSrc} from './_variables.js'
+import {backgroundImageSrc} from './variables.js'
 
 export default function constructAppBody() {
   if (myLibrary == '') emptyAppBody();
