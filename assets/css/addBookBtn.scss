@@ -4,7 +4,7 @@
   border-radius: 50%;
 
   background-color: #E9C46A;
-  background-image: url('/assets/images/add-book-light.png');
+  background-image: url('./assets/images/add-book-light.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 30px 30px;
@@ -19,7 +19,7 @@
   &:hover {
     transform: scale(1.1);
     background-color: #E76F51;
-    background-image: url('/assets/images/add-book-dark.png');
+    background-image: url('./assets/images/add-book-dark.png');
   }
 
   #add-book-icon {
