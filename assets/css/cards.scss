@@ -1,0 +1,42 @@
+.card {
+  background-color: #e9c46a;
+  box-shadow: 5px 5px 0 #e76f51;
+
+  max-height: 150px;
+  max-width: 90vw;
+  min-width: 300px;
+
+  padding: 0.5rem;
+
+  position: relative;
+
+  .fa-times, .edit-btn {
+    display: none;
+    position: absolute;
+    transition: all 0.5s;
+    
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .fa-times {
+    top: 0.9rem;
+    right: 1rem;
+    font-size: 20px;
+  }
+
+  .edit-btn {
+    top: 1rem;
+    right: 2.5rem;
+  }
+
+  .active {
+    display: block;
+  }
+}
+
+.close{
+  animation: popin 0.5s reverse;
+}

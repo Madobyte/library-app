@@ -16,17 +16,26 @@
 }
 @keyframes from-btn {
   from {
-    transform: translate(0, 0) scale(0);
+    transform: translate(100%, 0) scale(0);
+    transform-origin: center;
   }
   to {
     transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
   }
 }
 @keyframes to-btn {
   from {
     transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
   }
   to {
-    transform: translate(0, 0) scale(0);
+    transform: translate(100%, 100%) scale(0);
+    transform-origin: center;
   }
+}
+
+@keyframes popin {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
 }

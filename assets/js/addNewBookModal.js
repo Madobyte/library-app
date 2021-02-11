@@ -1,3 +1,5 @@
+import addBookToLibrary from './myLibrary.js'
+
 export default function addNewBookModal() {
   const modalContainer = document.createElement('div');
   modalContainer.id = 'modal-container';
@@ -12,11 +14,9 @@ export default function addNewBookModal() {
   
   createForm();
 
-  const form = document.getElementById('add-book-form');
-  form.addEventListener('submit', submitForm(this))
+  addBookToLibrary();
 
-  
-  modalContainer.addEventListener('click', removeForm)
+  modalContainer.addEventListener('click', removeForm);
   
   const closeBtn = document.createElement('i');
   closeBtn.classList.add('fa', 'fa-times');
@@ -29,26 +29,31 @@ export default function addNewBookModal() {
 const formFields = [
   {
     label: 'Book title',
+    id: 'title',
     type: 'text',
     isImportant: true
   },
   {
     label: 'Book author',
+    id: 'author',
     type: 'text',
     isImportant: true
   },
   {
     label: 'Number of pages',
+    id: 'pages',
     type: 'number',
     isImportant: true
   },
   {
     label: 'Language',
+    id: 'language',
     type: 'text',
     isImportant: true
   },
   {
     label: 'Published date',
+    id: 'published',
     type: 'date',
     isImportant: true
   },
@@ -69,10 +74,11 @@ function createForm() {
     label.classList.add('form-label');
     label.innerText = element.label;
     const field = document.createElement('input');
-    field.id = element.label;
+    field.name = element.id;
+    field.id = element.id;
     field.classList.add('input-field');
     field.type = element.type;
-    field.attributes.required = element.isImportant;
+    field.required = element.isImportant;
 
     bookForm.appendChild(label);
     bookForm.appendChild(field);
@@ -101,11 +107,7 @@ function removeForm(e) {
         modal.classList.remove('modal-active');
         modal.classList.add('modal-inactive');
         modalContainer.addEventListener('animationend', () => {
-          modalContainer.remove();
+        modalContainer.remove();
         })
   }
-}
-
-async function submitForm(e, form) {
-  console.log(form)
 }

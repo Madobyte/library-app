@@ -1,8 +1,9 @@
-import {myLibrary} from './myLibrary.js';
 import {backgroundImageSrc} from './variables.js'
+import createBookCards from './createBookCards.js'
 
 export default function constructAppBody() {
-  if (myLibrary == '') emptyAppBody();
+  if (localStorage.length === 0) emptyAppBody();
+  else createBookCards();
 }
 
 function emptyAppBody() {

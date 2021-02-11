@@ -28,15 +28,16 @@ I realize that making this app will prove my **basic CRUD abilities**.
 - [x] Create a Beautiful GUI.
   - [x] Display a warning and a picture when no books are found.
   - [x] Add mobile responsiveness.
-- [ ] Add book using the `addBookBtn`.
-  - [ ] Use constructors and prototypes.
-- [ ] Adding book will `push` an entry to `myLibrary` array.
+- [x] Add book using the `addBookBtn`.
+  - [x] Use constructors and prototypes.
+- [x] Adding book will `push` an entry to `myLibrary` array.
   - [ ] Or submit into a JSON file.
-  - [ ] Or use HTML Web Storage
-- [ ] Adding books will display book 'cards' on `appBody`.
+  - [x] Or use HTML localStorage.
+- [x] Adding books will display book 'cards' on `appBody`.
 - [ ] Add a read or wish list status of the book.
 - [ ] Add the abilitiy to edit book card.
-- [ ] Add delete button to delete book.
+- [x] Add delete button to delete book.
+- [ ] Add sorting method.
 - [ ] Add a light and dark version of the app.
 
 ## Commits
@@ -46,5 +47,14 @@ At the first day of development, I created most of the GUI in material design. I
 The app's functionality is not yet accomplished. But I will continue to develop the app.
 
 I started learning `Figma` for design mockups! See [mockup](https://www.figma.com/file/QM0sQxWJoXgchjIWP25ANi/Library-App?node-id=0%3A1).
+
+**02/11/2021**
+Added `handleInputChange` and `handleSubmit`.
+
+~~Added `addBtn`. This works and pushes the input data to `myLibrary` array.~~
+
+Used `localStorage` to store data. I anticipated the problem of not using unique keys when setting items to the `localStorage`. If I had gone with using the length of the localStorage for indexing, problems will surely arise when deleting an entry.
+
+Added `removeBtn` and `editBtn`. `removeBtn` removes the card in the `#app-body` and removes the entry in the `localStorage`.
 
 **This Project is part of The Odin Project Curriculum**
