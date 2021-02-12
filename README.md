@@ -31,11 +31,11 @@ I realize that making this app will prove my **basic CRUD abilities**.
 - [x] Add book using the `addBookBtn`.
   - [x] Use constructors and prototypes.
 - [x] Adding book will `push` an entry to `myLibrary` array.
-  - [ ] Or submit into a JSON file.
+  - [ ] ~~Or submit into a JSON file.~~
   - [x] Or use HTML localStorage.
 - [x] Adding books will display book 'cards' on `appBody`.
 - [ ] Add a read or wish list status of the book.
-- [ ] Add the abilitiy to edit book card.
+- [x] Add the abilitiy to edit book card.
 - [x] Add delete button to delete book.
 - [ ] Add sorting method.
 - [ ] Add a light and dark version of the app.
@@ -56,5 +56,10 @@ Added `handleInputChange` and `handleSubmit`.
 Used `localStorage` to store data. I anticipated the problem of not using unique keys when setting items to the `localStorage`. If I had gone with using the length of the localStorage for indexing, problems will surely arise when deleting an entry.
 
 Added `removeBtn` and `editBtn`. `removeBtn` removes the card in the `#app-body` and removes the entry in the `localStorage`.
+
+**02/12/2021**
+Added edit functionality. Basic CRUD functionality was achieved!
+
+Fixed some animations.
 
 **This Project is part of The Odin Project Curriculum**

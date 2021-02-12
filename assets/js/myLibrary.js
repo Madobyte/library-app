@@ -1,4 +1,3 @@
-import createBookCards from "./createBookCards.js";
 import createSingleBookCard from "./createSingleBookCard.js";
 import uniqueIdGenerator from "./uniqueIdGenerator.js";
 
@@ -42,6 +41,7 @@ export default function addBookToLibrary() {
     form.remove();
     
     const successMsg = document.createElement('p');
+    successMsg.classList.add('success-msg');
     successMsg.innerText = "Book added!"
     
     const modal = document.getElementById('modal');

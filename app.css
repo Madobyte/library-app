@@ -45,7 +45,7 @@ header #app-title {
 #app-body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 150px;
+  grid-auto-rows: 200px;
   grid-gap: 1rem;
   justify-items: center;
   min-height: calc(100vh - 175px);
@@ -142,17 +142,17 @@ footer .credits {
     transform-origin: center;
   }
 }
-@keyframes to-btn {
+@keyframes modal-popin {
   from {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
     transform-origin: center;
   }
   to {
-    transform: translate(100%, 100%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
     transform-origin: center;
   }
 }
-@keyframes popin {
+@keyframes card-popin {
   from {
     transform: scale(0);
   }
@@ -170,7 +170,7 @@ footer .credits {
 #modal-container #modal {
   max-height: 100vh;
   max-width: 100vw;
-  height: 750px;
+  height: auto;
   width: 500px;
   margin: 1rem 0;
   padding: 1rem;
@@ -189,27 +189,33 @@ footer .credits {
 #modal-container #modal form > * {
   margin-bottom: 1rem;
 }
-#modal-container #modal p {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 1.5rem;
-}
-#modal-container #modal input,
-#modal-container #modal button {
+#modal-container #modal form input,
+#modal-container #modal form button {
   font-size: 20px;
   height: 3rem;
   max-width: 90vw;
-  width: 400px;
+  width: 450px;
   border: 1px solid rgba(38, 70, 83, 0.2);
   box-shadow: 5px 5px 0 #264653;
   transition: all 0.5s;
   cursor: pointer;
 }
-#modal-container #modal input:hover,
-#modal-container #modal button:hover {
+#modal-container #modal form input:hover,
+#modal-container #modal form button:hover {
   box-shadow: none;
 }
-#modal-container #modal .add-btn {
+#modal-container #modal form label {
+  max-width: 400px;
+}
+#modal-container #modal p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+#modal-container #modal .success-msg {
+  margin-top: 1.5rem;
+}
+#modal-container #modal .add-btn, #modal-container #modal .save-btn {
   background-color: #2a9d8f;
 }
 #modal-container #modal .clear-btn {
@@ -241,17 +247,21 @@ footer .credits {
 }
 
 .modal-inactive {
-  animation: to-btn 0.5s forwards;
+  animation: modal-popin 0.5s reverse;
 }
 
 .card {
   background-color: #e9c46a;
   box-shadow: 5px 5px 0 #e76f51;
-  max-height: 150px;
+  min-height: 150px;
+  height: 200px;
+  max-height: 300px;
   max-width: 90vw;
+  width: 300px;
   min-width: 300px;
   padding: 0.5rem;
   position: relative;
+  transition: all 0.5s;
 }
 .card .fa-times, .card .edit-btn {
   display: none;
@@ -263,12 +273,12 @@ footer .credits {
   cursor: pointer;
 }
 .card .fa-times {
-  top: 0.9rem;
+  bottom: 1.1rem;
   right: 1rem;
   font-size: 20px;
 }
 .card .edit-btn {
-  top: 1rem;
+  bottom: 1rem;
   right: 2.5rem;
 }
 .card .active {
@@ -276,7 +286,7 @@ footer .credits {
 }
 
 .close {
-  animation: popin 0.5s reverse;
+  transform: scale(0);
 }
 
 * {

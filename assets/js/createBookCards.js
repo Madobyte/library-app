@@ -2,9 +2,8 @@ import deleteOrEditCard from "./deleteOrEditCard.js";
 
 export default function createBookCards() {
   const appBody = document.getElementById('app-body');
-  const backgroundImage = document.querySelector('.background-image');
-  console.log(backgroundImage);
-  if (backgroundImage) appBody.textContent = '';
+  const background = document.getElementById('background-container')
+  //if (background) background.style.cssText = 'display: none;';
   Object.keys(localStorage).forEach(index => {
     const book = JSON.parse(localStorage.getItem(index));
     const card = document.createElement('div');
