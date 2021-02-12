@@ -6,7 +6,7 @@ export default function createSingleBookCard(object, index) {
   const card = document.createElement('div');
   card.id = index;
   card.classList.add('card');
-  card.style.cssText = "animation: popin 0.5s;"
+  card.style.cssText = "animation: card-popin 0.5s;"
   Object.keys(object).forEach(data => {
     if (data === 'title') {
       const entry = document.createElement('h2');
