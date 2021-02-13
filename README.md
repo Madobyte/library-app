@@ -14,6 +14,8 @@
   - Nesting
 - Vanilla Javascript
   - Javascript modules
+  - localStorage
+  - CRUD
 
 ## Dev's Reflection
 I realize that making this app will prove my **basic CRUD abilities**.
@@ -34,10 +36,13 @@ I realize that making this app will prove my **basic CRUD abilities**.
   - [ ] ~~Or submit into a JSON file.~~
   - [x] Or use HTML localStorage.
 - [x] Adding books will display book 'cards' on `appBody`.
+ - [x] Format book. Add proper capitalizations.
 - [ ] Add a read or wish list status of the book.
 - [x] Add the abilitiy to edit book card.
 - [x] Add delete button to delete book.
-- [ ] Add sorting method.
+  - [ ] Delete bin functionality.
+  - [ ] Empty localStorage feature.
+- [x] Add sorting method.
 - [ ] Add a light and dark version of the app.
 
 ## Commits
@@ -61,5 +66,10 @@ Added `removeBtn` and `editBtn`. `removeBtn` removes the card in the `#app-body`
 Added edit functionality. Basic CRUD functionality was achieved!
 
 Fixed some animations.
+
+**02/13/2021**
+Added sort functionality.
+
+Added a proper capitalization when adding books.
 
 **This Project is part of The Odin Project Curriculum**

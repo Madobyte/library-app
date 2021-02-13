@@ -1,14 +1,16 @@
 import deleteOrEditCard from "./deleteOrEditCard.js";
+import sortCards from "./sortCards.js";
 
 export default function createBookCards() {
   const appBody = document.getElementById('app-body');
-  const background = document.getElementById('background-container')
-  //if (background) background.style.cssText = 'display: none;';
-  Object.keys(localStorage).forEach(index => {
-    const book = JSON.parse(localStorage.getItem(index));
+  let sortedLibrary = sortCards();
+
+  sortedLibrary.forEach(entry => {
     const card = document.createElement('div');
-    card.id = index;
+    card.id = entry[0];
     card.classList.add('card');
+
+    const book = JSON.parse(entry[1]);
     Object.keys(book).forEach(data => {
       if (data === 'title') {
         const entry = document.createElement('h2');

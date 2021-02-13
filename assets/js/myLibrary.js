@@ -1,5 +1,6 @@
 import createSingleBookCard from "./createSingleBookCard.js";
 import uniqueIdGenerator from "./uniqueIdGenerator.js";
+import capitalize from './capitalize.js'
 
 //let myLibrary = JSON.parse(localStorage.getItem('myLibrary'))
 let myLibrary = []
@@ -20,7 +21,7 @@ export default function addBookToLibrary() {
   const inputFields = document.querySelectorAll('input');
   inputFields.forEach(input => input.addEventListener('input', (e) => {
     e.preventDefault();
-    newBook[e.target.name] = e.target.value;
+    newBook[e.target.name] = capitalize(e.target.value);
   }));
 
   const form = document.getElementById('add-book-form');

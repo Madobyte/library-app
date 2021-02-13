@@ -3,8 +3,8 @@
   box-shadow: 5px 5px 0 #e76f51;
 
   min-height: 150px;
-  height: 200px;
-  max-height: 300px;
+  height: auto;
+  max-height: 100vh;
   max-width: 90vw;
   width: 300px;
   min-width: 300px;
@@ -39,6 +39,11 @@
 
   .active {
     display: block;
+  }
+
+  h2 {
+    max-width: 90vw;
+    overflow-wrap: break-word;
   }
 }
 

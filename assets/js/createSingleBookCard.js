@@ -1,13 +1,14 @@
 import deleteOrEditCard from "./deleteOrEditCard.js";
-import { backgroundImageSrc } from "./variables.js";
 
 export default function createSingleBookCard(object, index) {
   const background = document.getElementById('background-container');
+  const cardBefore = findCardBefore(object['published'], object['added']);
   const card = document.createElement('div');
   card.id = index;
   card.classList.add('card');
   card.style.cssText = "animation: card-popin 0.5s;"
   Object.keys(object).forEach(data => {
+    console.log(object['added'])
     if (data === 'title') {
       const entry = document.createElement('h2');
       entry.classList.add(data);

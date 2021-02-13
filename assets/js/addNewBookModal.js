@@ -77,6 +77,7 @@ function createForm() {
     field.name = element.id;
     field.id = element.id;
     field.classList.add('input-field');
+    field.maxLength = '60';
     field.type = element.type;
     field.required = element.isImportant;
 
