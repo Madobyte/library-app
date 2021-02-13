@@ -72,4 +72,6 @@ Added sort functionality.
 
 Added a proper capitalization when adding books.
 
+Fixed some sorting bugs.
+
 **This Project is part of The Odin Project Curriculum**

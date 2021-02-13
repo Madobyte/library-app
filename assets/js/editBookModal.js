@@ -155,7 +155,6 @@ function updateBookCard(book, cardIndex) {
   const background = document.getElementById('app-body');
   card.classList.add('close');
   card.addEventListener('transitionend', () => {
-    console.log('end!')
     card.remove();
     const cards = document.querySelectorAll('.card');
     if (cards.length === 0) background.style.cssText = 'display: block;';

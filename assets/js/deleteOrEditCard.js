@@ -38,9 +38,7 @@ export default function deleteOrEditCard() {
       });
 
       editBtn.addEventListener('click', () => {
-        console.log(card.id);
         const cardToEdit = localStorage.getItem(cardIndex);
-        console.log(cardToEdit);
         editBookModal(cardIndex);
       })
     })

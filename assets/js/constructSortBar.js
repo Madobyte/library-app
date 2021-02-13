@@ -29,8 +29,15 @@ export default function constructSortBar() {
 
   sortSelectInput.addEventListener('change', instantSort);
   sortIcon.addEventListener('click', () => {
-    sortIcon.classList.toggle('fa-sort-amount-asc');
-    sortIcon.classList.toggle('fa-sort-amount-desc');
+
+    if (sortIcon.classList[1] === 'fa-sort-amount-asc') {
+      sortIcon.classList.remove('fa-sort-amount-asc');
+      sortIcon.classList.add('fa-sort-amount-desc'); 
+    } else if (sortIcon.classList[1] === 'fa-sort-amount-desc') {
+      sortIcon.classList.remove('fa-sort-amount-desc');
+      sortIcon.classList.add('fa-sort-amount-asc'); 
+    }
+    sortIcon.style.pointerEvents = 'none';
     instantSort();
   })
 }

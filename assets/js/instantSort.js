@@ -4,25 +4,22 @@ import sortCards from "./sortCards.js";
 export default function instantSort() {
   const currentCards = document.querySelectorAll('.card');
   const sortSelect = document.getElementById('sort-select');
-  console.log(sortSelect.value);
   const sortIcon = document.getElementById('sort-icon');
-  console.log(sortIcon.classList[1])
 
   let sortedLibrary;
 
   if (sortIcon.classList[1] === 'fa-sort-amount-desc') {
     sortedLibrary = sortCards(sortSelect.value);
-  } else {
+  } else if (sortIcon.classList[1] === 'fa-sort-amount-asc') {
     sortedLibrary = sortCards(sortSelect.value).reverse();
   }
 
-  console.log(sortedLibrary);
   currentCards.forEach(card => {
     card.classList.add('close');
     card.addEventListener('transitionend', () => {
       card.remove();
     });
-  })
+  });
 
   setTimeout(() => {
     sortedLibrary.forEach(book => {
@@ -30,5 +27,8 @@ export default function instantSort() {
       const index = book[0];
       createSingleBookCard(object, index);
     })
-  }, 500)
+    
+    setTimeout(() => {sortIcon.style.pointerEvents = 'auto'}, 300);
+  }, 500);
+
 }
